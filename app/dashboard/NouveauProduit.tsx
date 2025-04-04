@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { CheckIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { CheckIcon} from '@heroicons/react/24/outline'
 import { createProduct } from "@/utils/supabase/products"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
