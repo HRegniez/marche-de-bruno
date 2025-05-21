@@ -1,9 +1,9 @@
 import { useTransform, motion, type MotionValue } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import HeroLogo from "../components/HeroLogo";
-import ServiceFeatures from "../components/ServiceFeatures";
-import { ServiceFeaturesMobile } from "../components/ServiceFeaturesMobile";
+import HeroLogo from "../HeroLogo";
+import ServiceFeatures from "../ServiceFeatures";
+import { ServiceFeaturesMobile } from "../ServiceFeaturesMobile";
 export default function Hero({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
 // const HeroSection = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9])

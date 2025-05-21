@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { getProducts } from "@/app/lib/supabase/products"
+import { getProducts } from "@/lib/supabase/products"
 import NouveauProduit from "./NouveauProduit"
 import EditerProduit from './EditerProduit'
 import EditerCategory from './EditerCategory'

@@ -2,10 +2,10 @@
 
 import { useScroll} from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import ProductsSection from "./sections/ProductsSection";
-import APropos from "./sections/APropos";
-import Hero from "./sections/Hero";
-import Contact from "./sections/Contact";
+import ProductsSection from "../components/sections/ProductsSection";
+import APropos from "../components/sections/APropos";
+import Hero from "../components/sections/Hero";
+import Contact from "../components/sections/Contact";
 export default function Home() {
 
   const container = useRef(null)

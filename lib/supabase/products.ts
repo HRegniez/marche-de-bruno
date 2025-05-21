@@ -1,6 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
 
-// Create Supabase client
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -23,12 +22,11 @@ export interface ProductType {
 export interface ProductCategory {
   id: string
   name: string
-  image: string // You'll need to add images for each category
+  image: string 
   products: Product[]
 }
 
 export async function getProducts(): Promise<ProductCategory[]> {
-  // Fetch product types
 
   const { data: types, error: typesError } = await supabase
     .from('bruno_produit_types')
@@ -37,9 +35,7 @@ export async function getProducts(): Promise<ProductCategory[]> {
   if (typesError) {
     throw typesError
   }
-
-
-  // Fetch products
+ 
   const { data: products, error: productsError } = await supabase
     .from('bruno_produits')
     .select('*')
@@ -48,11 +44,9 @@ export async function getProducts(): Promise<ProductCategory[]> {
     throw productsError
   }
 
-  // Transform the data into the required format
   const result = types.map(type => ({
     id: type.id,
     name: type.name,
-    // You'll need to add actual images for each category
     image: `/images/categories/${type.name.toLowerCase()}.jpg`,
     products: products
       .filter(product => product.type === type.id)

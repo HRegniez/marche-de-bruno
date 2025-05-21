@@ -3,9 +3,9 @@
 import { motion, useTransform, MotionValue } from 'framer-motion';
 
 import { useState, useEffect } from 'react';
-import Products from '../components/Products';
-import { getProducts } from '../lib/supabase/products';
-import type { ProductCategory } from '../lib/supabase/products';
+import Products from '../Products';
+import { getProducts } from '../../lib/supabase/products';
+import type { ProductCategory } from '../../lib/supabase/products';
 
 
 
